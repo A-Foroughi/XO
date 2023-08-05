@@ -47,7 +47,15 @@ print()
 for i in range(9):
     print(f"{player1} It's your turn.")
     y = player1
-    s = int(input())
+    s = input()
+    try:
+        s = int(s)
+    except:
+        print("You entered a wrong value.")
+        exit(0) 
+    if not 10 > s > 0:
+        print("You entered a wrong value.")
+        exit(0) 
     put("X", s)
     print_table(A)
     print()
@@ -57,7 +65,15 @@ for i in range(9):
 
     print(f"{player2} It's your turn.")
     y = player2
-    s = int(input())
+    s = input()
+    try:
+        s = int(s)
+    except:
+        print("You entered a wrong value.")
+        exit(0) 
+    if not 10 > s > 0:
+        print("You entered a wrong value.")
+        exit(0) 
     put("O", s)
     print_table(A)
     print()
